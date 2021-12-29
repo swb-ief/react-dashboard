@@ -41,7 +41,7 @@ function Footer() {
         </a>
 
         <a
-          href="https://t.me/covid19indiaorg"
+          href="#"
           className="telegram"
           target="_blank"
           rel="noopener noreferrer"
@@ -50,7 +50,7 @@ function Footer() {
         </a>
 
         <a
-          href="https://twitter.com/covid19indiaorg"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="twitter"
@@ -59,7 +59,7 @@ function Footer() {
         </a>
 
         <a
-          href="https://instagram.com/covid19indiaorg"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="instagram"
@@ -68,7 +68,7 @@ function Footer() {
         </a>
 
         <a
-          href="mailto:hello@covid19india.org"
+          href="#"
           className="mail"
           target="_blank"
           rel="noopener noreferrer"

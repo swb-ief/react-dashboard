@@ -57,11 +57,11 @@ function Navbar({pages, showLanguageSwitcher, setShowLanguageSwitcher}) {
         {locales[currentLanguage]}
       </div>
 
-      <div className="navbar-middle">
-        <Link to="/" onClick={setExpand.bind(this, false)}>
+       <div className="navbar-middle">
+{/*         <Link to="/" onClick={setExpand.bind(this, false)}>
           Covid19<span>India</span>
-        </Link>
-      </div>
+         </Link>*/}
+       </div>
 
       <div
         className="navbar-right"

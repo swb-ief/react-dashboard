@@ -239,7 +239,7 @@ export const MAP_TYPES = {
 };
 
 export const MAPS_DIR =
-  process.env.NODE_ENV === 'production' ? '/mini_maps' : '/projected_maps';
+  process.env.NODE_ENV === 'production' ? `${process.env.PUBLIC_URL}/mini_maps` : `${process.env.PUBLIC_URL}/projected_maps`;
 
 export const MAP_META = {
   AP: {

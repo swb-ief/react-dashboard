@@ -1,6 +1,7 @@
 import './App.scss';
 import Blog from './components/Blog';
 import Navbar from './components/Navbar';
+import Contributors from './components/Contributors';
 import {retry} from './utils/commonFunctions';
 
 import {lazy, useState, Suspense, useEffect} from 'react';
@@ -71,8 +72,8 @@ const App = () => {
 
       <Navbar {...{pages, showLanguageSwitcher, setShowLanguageSwitcher}} />
 
-      <Banner />
-
+      {/*<Banner />*/}
+      <Contributors />
       <Suspense fallback={<div />}>
         <Switch location={location}>
           {pages.map((page, index) => {

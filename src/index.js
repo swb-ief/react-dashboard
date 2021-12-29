@@ -13,7 +13,7 @@ const rootElement = document.getElementById('root');
 const main = () =>
   render(
     <Suspense fallback={<div />}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <StrictMode>
           <App />
         </StrictMode>
