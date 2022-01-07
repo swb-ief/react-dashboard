@@ -75,7 +75,7 @@ function State() {
   }, [regionHighlighted.stateCode, stateCode]);
 
   const {data: timeseries, error: timeseriesResponseError} = useSWR(
-    `${DATA_API_ROOT}/timeseries-${stateCode}.min.json`,
+    `${DATA_API_ROOT}/timeseries/${stateCode}.min.json`,
     fetcher,
     {
       revalidateOnMount: true,
