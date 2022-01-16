@@ -530,46 +530,48 @@ function Table({
 }
 
 const isEqual = (prevProps, currProps) => {
-  if (
-    !equal(
-      prevProps.regionHighlighted?.districtName,
-      currProps.regionHighlighted?.districtName
-    )
-  ) {
-    return false;
-  } else if (
-    !equal(
-      prevProps.regionHighlighted?.stateCode,
-      currProps.regionHighlighted?.stateCode
-    )
-  ) {
-    return false;
-  } else if (!equal(prevProps.date, currProps.date)) {
-    return false;
-  } else if (!equal(prevProps.hideDistrictData, currProps.hideDistrictData)) {
-    return false;
-  } else if (
-    !equal(prevProps.hideDistrictTestData, currProps.hideDistrictTestData)
-  ) {
-    return false;
-  } else if (!equal(prevProps.hideVaccinated, currProps.hideVaccinated)) {
-    return false;
-  } else if (!equal(prevProps.expandTable, currProps.expandTable)) {
-    return false;
-  } else if (!equal(prevProps.lastDataDate, currProps.lastDataDate)) {
-    return false;
-  } else if (
-    !equal(
-      prevProps.data['TT'].total.confirmed,
-      currProps.data['TT'].total.confirmed
-    )
-  ) {
-    return false;
-  } else if (
-    !equal(prevProps.noDistrictDataStates, currProps.noDistrictDataStates)
-  ) {
-    return false;
-  } else return true;
+//   if (
+//     !equal(
+//       prevProps.regionHighlighted?.districtName,
+//       currProps.regionHighlighted?.districtName
+//     )
+//   ) {
+//     return false;
+//   } else if (
+//     !equal(
+//       prevProps.regionHighlighted?.stateCode,
+//       currProps.regionHighlighted?.stateCode
+//     )
+//   ) {
+//     return false;
+//   } else if (!equal(prevProps.date, currProps.date)) {
+//     return false;
+//   } else if (!equal(prevProps.hideDistrictData, currProps.hideDistrictData)) {
+//     return false;
+//   } else if (
+//     !equal(prevProps.hideDistrictTestData, currProps.hideDistrictTestData)
+//   ) {
+//     return false;
+//   } else if (!equal(prevProps.hideVaccinated, currProps.hideVaccinated)) {
+//     return false;
+//   } else if (!equal(prevProps.expandTable, currProps.expandTable)) {
+//     return false;
+//   } else if (!equal(prevProps.lastDataDate, currProps.lastDataDate)) {
+//     return false;
+//   } else if (
+//     !equal(
+//       prevProps.data['TT'].total.confirmed,
+//       currProps.data['TT'].total.confirmed
+//     )
+//   ) {
+//     return false;
+//   } else if (
+//     !equal(prevProps.noDistrictDataStates, currProps.noDistrictDataStates)
+//   ) {
+//     return false;
+//   } else return true;
+//
+return false
 };
 
 export default memo(Table, isEqual);

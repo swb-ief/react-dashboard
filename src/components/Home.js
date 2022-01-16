@@ -46,7 +46,7 @@ const TimeseriesExplorer = lazy(() =>
 function Home() {
   const [regionHighlighted, setRegionHighlighted] = useState({
     stateCode: 'TT',
-    districtName: null,
+    districtName: '',
   });
 
   const [anchor, setAnchor] = useLocalStorage('anchor', null);

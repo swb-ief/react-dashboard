@@ -28,12 +28,6 @@ const App = () => {
       showInNavbar: true,
     },
     {
-      pageLink: '/blog',
-      view: Blog,
-      displayName: 'Blog',
-      showInNavbar: true,
-    },
-    {
       pageLink: '/volunteers',
       view: Volunteers,
       displayName: 'Volunteers',

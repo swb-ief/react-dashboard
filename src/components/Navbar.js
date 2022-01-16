@@ -81,11 +81,6 @@ function Navbar({pages, showLanguageSwitcher, setShowLanguageSwitcher}) {
                 <Home {...activeNavIcon('/')} />
               </span>
             </Link>
-            <Link to="/blog">
-              <span>
-                <Book {...activeNavIcon('/blog')} />
-              </span>
-            </Link>
             <Link to="/volunteers">
               <span>
                 <Users {...activeNavIcon('/volunteers')} />

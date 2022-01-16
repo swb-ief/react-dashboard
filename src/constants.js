@@ -6,6 +6,14 @@ import {scaleOrdinal} from 'd3-scale';
 // export const API_DOMAIN = 'https://api.covid19india.org';
 export const API_DOMAIN = 'https://api.covid19tracker.in';
 
+
+
+  // DISTRICT_TABLE_COUNT,
+  // STATE_NAMES,
+  // STATISTIC_CONFIGS,
+  // TABLE_STATISTICS,
+  // TABLE_STATISTICS_EXPANDED,
+  // UNASSIGNED_STATE_CODE,
 export const DATA_API_ROOT = `${API_DOMAIN}/data/static`;
 export const API_REFRESH_INTERVAL = 100000; // seconds
 

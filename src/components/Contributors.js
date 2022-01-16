@@ -2,9 +2,10 @@ import React from 'react'
 
 function Contributors() {
     return (
-        <div className='contributors'>
-           <img className='contributorItem' src={require('../iith.png').default} alt="" />
-           <img className='contributorItem' src={require('../ief.png').default} alt="" />
+        <div className='contributors' style={{'marginTop':'20px'}}>
+            <a href="http://thinkief.org/">
+                <img className='contributorItem' src={require('../ief.png').default} alt="" />
+            </a>
         </div>
     )
 }

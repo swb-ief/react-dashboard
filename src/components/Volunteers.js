@@ -19,6 +19,9 @@ import useSWR from 'swr';
 const VOLUNTEERS_DOMAIN = 'https://volunteers.covid19india.org';
 const PLACEHOLDER_IMG = 'placeholder.jpg';
 
+
+
+
 function Member({className, style, name, bio, link, image, socials = {}}) {
   const [loaded, setLoaded] = useState(false);
 
@@ -85,12 +88,65 @@ function Member({className, style, name, bio, link, image, socials = {}}) {
 
 // TODO: Lazy-loading and content loader
 function Volunteers() {
-  const {data} = useSWR(`${VOLUNTEERS_DOMAIN}/data.json`, fetcher, {
-    suspense: true,
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-  });
+  // const {data} = useSWR(`${VOLUNTEERS_DOMAIN}/data.json`, fetcher, {
+  //   suspense: true,
+  //   revalidateIfStale: false,
+  //   revalidateOnFocus: false,
+  //   revalidateOnReconnect: false,
+  // });
+
+const data = [
+  {
+    "name": "IIT-Hyderabad",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "iCART",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "BMC",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "Colin Brewers",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "Issac Khader",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "Murray Ware",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  },
+  {
+    "name": "Anton Massinger",
+    "bio": "",
+    "socials": {
+      "github": ""
+    }
+  }
+  ]
+
 
   const dataAugemented = useMemo(() => [...(data || []), {}], [data]);
 
@@ -118,7 +174,7 @@ function Volunteers() {
   return (
     <>
       <Helmet>
-        <title>Volunteers - covid19india.org</title>
+        <title>Volunteers</title>
         <meta
           name="title"
           content="Coronavirus Outbreak in India: Latest Map and Case Count"
@@ -131,8 +187,7 @@ function Volunteers() {
             className={classnames('description', 'fadeInUp')}
             style={{animationDelay: '0.1s'}}
           >
-            We would like to thank the hundreds of volunteers who, for the last
-            18 months, extended their time and effort towards collating and
+            We would like to thank the volunteers who extended their time and effort towards collating and
             publishing COVID-19 data for India.
           </div>
         </div>
