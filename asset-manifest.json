@@ -21,8 +21,8 @@
     "static/js/8.ebec8a28.chunk.js.map": "/react-dashboard/static/js/8.ebec8a28.chunk.js.map",
     "main.js": "/react-dashboard/static/js/main.30fe474e.chunk.js",
     "main.js.map": "/react-dashboard/static/js/main.30fe474e.chunk.js.map",
-    "runtime-main.js": "/react-dashboard/static/js/runtime-main.d41bf384.js",
-    "runtime-main.js.map": "/react-dashboard/static/js/runtime-main.d41bf384.js.map",
+    "runtime-main.js": "/react-dashboard/static/js/runtime-main.f00cbf0a.js",
+    "runtime-main.js.map": "/react-dashboard/static/js/runtime-main.f00cbf0a.js.map",
     "static/js/11.f2143050.chunk.js": "/react-dashboard/static/js/11.f2143050.chunk.js",
     "static/js/11.f2143050.chunk.js.map": "/react-dashboard/static/js/11.f2143050.chunk.js.map",
     "static/js/12.427eaf07.chunk.js": "/react-dashboard/static/js/12.427eaf07.chunk.js",
@@ -41,8 +41,8 @@
     "static/js/18.420d3ab0.chunk.js.map": "/react-dashboard/static/js/18.420d3ab0.chunk.js.map",
     "static/js/19.d0364674.chunk.js": "/react-dashboard/static/js/19.d0364674.chunk.js",
     "static/js/19.d0364674.chunk.js.map": "/react-dashboard/static/js/19.d0364674.chunk.js.map",
-    "static/js/20.8caa13aa.chunk.js": "/react-dashboard/static/js/20.8caa13aa.chunk.js",
-    "static/js/20.8caa13aa.chunk.js.map": "/react-dashboard/static/js/20.8caa13aa.chunk.js.map",
+    "static/js/20.db19c613.chunk.js": "/react-dashboard/static/js/20.db19c613.chunk.js",
+    "static/js/20.db19c613.chunk.js.map": "/react-dashboard/static/js/20.db19c613.chunk.js.map",
     "static/css/21.f5f9d973.chunk.css": "/react-dashboard/static/css/21.f5f9d973.chunk.css",
     "static/js/21.6af09e34.chunk.js": "/react-dashboard/static/js/21.6af09e34.chunk.js",
     "static/js/21.6af09e34.chunk.js.map": "/react-dashboard/static/js/21.6af09e34.chunk.js.map",
@@ -105,7 +105,7 @@
     "static/css/22.18c158eb.chunk.css.map": "/react-dashboard/static/css/22.18c158eb.chunk.css.map",
     "static/js/11.f2143050.chunk.js.LICENSE.txt": "/react-dashboard/static/js/11.f2143050.chunk.js.LICENSE.txt",
     "static/js/17.01bc8e04.chunk.js.LICENSE.txt": "/react-dashboard/static/js/17.01bc8e04.chunk.js.LICENSE.txt",
-    "static/js/20.8caa13aa.chunk.js.LICENSE.txt": "/react-dashboard/static/js/20.8caa13aa.chunk.js.LICENSE.txt",
+    "static/js/20.db19c613.chunk.js.LICENSE.txt": "/react-dashboard/static/js/20.db19c613.chunk.js.LICENSE.txt",
     "static/js/24.8a6fff04.chunk.js.LICENSE.txt": "/react-dashboard/static/js/24.8a6fff04.chunk.js.LICENSE.txt",
     "static/js/26.2416cfdf.chunk.js.LICENSE.txt": "/react-dashboard/static/js/26.2416cfdf.chunk.js.LICENSE.txt",
     "static/js/29.40f59c61.chunk.js.LICENSE.txt": "/react-dashboard/static/js/29.40f59c61.chunk.js.LICENSE.txt",
@@ -113,7 +113,7 @@
     "static/media/ief.png": "/react-dashboard/static/media/ief.cdcdf371.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d41bf384.js",
+    "static/js/runtime-main.f00cbf0a.js",
     "static/js/11.f2143050.chunk.js",
     "static/js/main.30fe474e.chunk.js"
   ]
