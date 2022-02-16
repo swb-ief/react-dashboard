@@ -6,7 +6,10 @@ import {scaleOrdinal} from 'd3-scale';
 // export const API_DOMAIN = 'https://api.covid19india.org';
 export const API_DOMAIN = 'https://api.covid19tracker.in';
 
+export const API_DOMAIN_MUMBAI = 'http://bowersbenjamin.pythonanywhere.com/';
 
+export const DATA_API_ROOT_MUMBAI_DISTRICT = `${API_DOMAIN}/phase2_districts_overview`;
+export const DATA_API_ROOT_MUMBAI_WARD = `${API_DOMAIN}/phase2_wards`;
 
   // DISTRICT_TABLE_COUNT,
   // STATE_NAMES,
@@ -398,6 +401,10 @@ export const MAP_META = {
     geoDataFile: `${MAPS_DIR}/india.json`,
     mapType: MAP_TYPES.COUNTRY,
   },
+  MU: {
+    geoDataFile: `${MAPS_DIR}/mumbai.json`,
+    mapType: MAP_TYPES.STATE,
+  },
 };
 
 export const MAP_DIMENSIONS = [432, 488];
@@ -441,6 +448,7 @@ export const STATE_NAMES = {
   LD: 'Lakshadweep',
   PY: 'Puducherry',
   TT: 'India',
+  MU: 'Mumbai',
   [UNASSIGNED_STATE_CODE]: 'Unassigned',
 };
 

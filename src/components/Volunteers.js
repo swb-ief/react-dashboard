@@ -118,14 +118,14 @@ const data = [
     }
   },
   {
-    "name": "Colin Brewers",
+    "name": "Colin Bowers",
     "bio": "",
     "socials": {
       "github": ""
     }
   },
   {
-    "name": "Issac Khader",
+    "name": "Isaac  Khader",
     "bio": "",
     "socials": {
       "github": ""

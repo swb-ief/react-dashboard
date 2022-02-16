@@ -1,5 +1,6 @@
 import {
   DATA_API_ROOT,
+  DATA_API_ROOT_MUMBAI_DISTRICT,
   MAP_STATISTICS,
   PRIMARY_STATISTICS,
   STATE_NAMES,
@@ -48,7 +49,7 @@ const TimeseriesExplorer = lazy(() =>
   retry(() => import('./TimeseriesExplorer'))
 );
 
-function Mumbai() {
+function State() {
   const {t} = useTranslation();
 
   const stateCode = useParams().stateCode.toUpperCase();
@@ -75,7 +76,7 @@ function Mumbai() {
   }, [regionHighlighted.stateCode, stateCode]);
 
   const {data: timeseries, error: timeseriesResponseError} = useSWR(
-    `${DATA_API_ROOT}/timeseries/${stateCode}.min.json`,
+    `${DATA_API_ROOT_MUMBAI_DISTRICT}`,
     fetcher,
     {
       revalidateOnMount: true,
@@ -83,11 +84,11 @@ function Mumbai() {
     }
   );
 
-  const {data} = useSWR(`${DATA_API_ROOT}/data.min.json`, fetcher, {
+  const data = useSWR(`${DATA_API_ROOT_MUMBAI_DISTRICT}`, fetcher, {
     revalidateOnMount: true,
     refreshInterval: 100000,
   });
-
+  console.log(data)
   const stateData = data?.[stateCode];
 
   const toggleShowAllDistricts = () => {
@@ -382,4 +383,4 @@ function Mumbai() {
   );
 }
 
-export default memo(Mumbai);
+export default memo(State);
