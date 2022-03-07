@@ -262,6 +262,21 @@ h6 {
   .home-right {
     display: flex;
     flex-direction: column;
+
+    .mumbai-btn-container {
+      text-decoration: none;
+      .mumbai-btn {
+        color: #F1C40F;
+        width: max-content;
+        padding: 0.2rem;
+        border-radius: 5px;
+        background-color: rgba(254, 249, 231, 0.1);
+        &:hover {
+          background-color: rgba(254, 249, 231, 0.2);
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   .home-left {
