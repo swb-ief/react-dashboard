@@ -84,11 +84,27 @@ function State() {
     }
   );
 
-  const data = useSWR(`${DATA_API_ROOT_MUMBAI_DISTRICT}`, fetcher, {
+  const {data, error} = useSWR(`${DATA_API_ROOT_MUMBAI_DISTRICT}`, fetcher, {
     revalidateOnMount: true,
     refreshInterval: 100000,
   });
-  console.log(data)
+
+  if (timeseriesResponseError) {
+    console.error(timeseriesResponseError);
+    return;
+  }
+  if (error) {
+    console.error(error);
+    return;
+  }
+  if (!timeseries) {
+    return;
+  }
+  if (!data) {
+    return;
+  }
+
+  console.log(data);
   const stateData = data?.[stateCode];
 
   const toggleShowAllDistricts = () => {

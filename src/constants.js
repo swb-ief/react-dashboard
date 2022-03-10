@@ -6,10 +6,10 @@ import {scaleOrdinal} from 'd3-scale';
 // export const API_DOMAIN = 'https://api.covid19india.org';
 export const API_DOMAIN = 'https://api.covid19tracker.in';
 
-export const API_DOMAIN_MUMBAI = 'http://bowersbenjamin.pythonanywhere.com/';
+export const API_DOMAIN_MUMBAI = 'http://bowersbenjamin.pythonanywhere.com';
 
-export const DATA_API_ROOT_MUMBAI_DISTRICT = `${API_DOMAIN}/phase2_districts_overview`;
-export const DATA_API_ROOT_MUMBAI_WARD = `${API_DOMAIN}/phase2_wards`;
+export const DATA_API_ROOT_MUMBAI_DISTRICT = `${API_DOMAIN_MUMBAI}/phase2_districts_overview`;
+export const DATA_API_ROOT_MUMBAI_WARD = `${API_DOMAIN_MUMBAI}/phase2_wards`;
 
   // DISTRICT_TABLE_COUNT,
   // STATE_NAMES,
@@ -42,10 +42,24 @@ export const STATISTIC_CONFIGS = {
     showDelta: true,
     hasPrimary: true,
   },
+  positive: {
+    displayName: 'positive',
+    color: '#ff073a',
+    format: 'long',
+    showDelta: false,
+    hasPrimary: true,
+  },
   active: {
     displayName: 'active',
     color: '#007bff',
     format: 'long',
+    hasPrimary: true,
+  },
+  discharged: {
+    displayName: 'discharged',
+    color: '#28a745',
+    format: 'long',
+    showDelta: false,
     hasPrimary: true,
   },
   recovered: {
@@ -53,6 +67,13 @@ export const STATISTIC_CONFIGS = {
     color: '#28a745',
     format: 'long',
     showDelta: true,
+    hasPrimary: true,
+  },
+  deaths: {
+    displayName: 'deaths',
+    color: '#6c757d',
+    format: 'long',
+    showDelta: false,
     hasPrimary: true,
   },
   deceased: {
@@ -72,6 +93,12 @@ export const STATISTIC_CONFIGS = {
     },
     hasPrimary: true,
   },
+  critical: {
+    displayName: 'critical',
+    color: '#4b1eaa',
+    format: 'short',
+    showDelta: false,
+  },
   tested: {
     displayName: 'tested',
     color: '#4b1eaa',
@@ -80,6 +107,12 @@ export const STATISTIC_CONFIGS = {
     hideZero: true,
     category: 'tested',
   },
+  stable_symptomatic: {
+    displayName: 'stable symptomatic',
+    color: '#fb5581',
+    format: 'short',
+    showDelta: false,
+  },
   vaccinated1: {
     displayName: 'vaccinated (at least one dose)',
     color: '#fb5581',
@@ -87,6 +120,12 @@ export const STATISTIC_CONFIGS = {
     showDelta: true,
     hideZero: true,
     category: 'vaccinated',
+  },
+  stable_asymptomatic: {
+    displayName: 'stable asymptomatic',
+    color: '#fd7e14',
+    format: 'short',
+    showDelta: false,
   },
   vaccinated2: {
     displayName: 'fully vaccinated',
@@ -183,7 +222,18 @@ export const PRIMARY_STATISTICS = [
   'deceased',
 ];
 
+export const MUMBAI_PRIMARY_STATISTICS = [
+  'active',
+  'positive',
+  'deaths',
+  'discharged',
+  'critical',
+  'stable_symptomatic',
+  'stable_asymptomatic',
+];
+
 export const LEVEL_STATISTICS = [...PRIMARY_STATISTICS];
+export const MUMBAI_LEVEL_STATISTICS = [...MUMBAI_PRIMARY_STATISTICS];
 
 export const TABLE_STATISTICS = [...PRIMARY_STATISTICS, 'tested', 'vaccinated'];
 
@@ -192,6 +242,7 @@ export const TABLE_STATISTICS_EXPANDED = Object.keys(STATISTIC_CONFIGS).filter(
 );
 
 export const MAP_STATISTICS = [...PRIMARY_STATISTICS];
+export const MUMBAI_MAP_STATISTICS = [...MUMBAI_PRIMARY_STATISTICS];
 
 export const TIMESERIES_STATISTICS = [
   ...PRIMARY_STATISTICS,
