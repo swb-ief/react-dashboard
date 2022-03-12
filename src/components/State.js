@@ -222,20 +222,22 @@ function Mumbai() {
         />
       </Helmet>
 
+      <div className="State" style={{position: 'relative'}}>
+        <br />
+        <br />
+        <MapSwitcher {...{mapStatistic, setMapStatistic}} isMumbai={true} />
+        <Level data={stateData} isMumbai={true} />
+        <Minigraphs
+          timeseries={timeseriesDates}
+          {...{stateCode}}
+          forceRender={!!timeseriesResponseError}
+          isMumbai={true}
+        />
+      </div>
+
       <div className="State">
         <div className="state-left">
           <StateHeader data={stateData} stateCode={stateCode} />
-          <div style={{position: 'relative'}}>
-            <MapSwitcher {...{mapStatistic, setMapStatistic}} isMumbai={true} />
-            <Level data={stateData} isMumbai={true} />
-            <Minigraphs
-              timeseries={timeseriesDates}
-              {...{stateCode}}
-              forceRender={!!timeseriesResponseError}
-              isMumbai={true}
-            />
-          </div>
-
 
           {stateData?.total?.vaccinated1 && (
             <VaccinationHeader data={stateData} />
@@ -261,9 +263,7 @@ function Mumbai() {
             </Suspense>
           )}
 
-          <span ref={stateMetaElement} />
-
-          {isStateMetaVisible && data && (
+          {data && (
             <Suspense fallback={<div />}>
               <StateMeta
                 {...{
@@ -274,6 +274,7 @@ function Mumbai() {
               />
             </Suspense>
           )}
+          {/* <span ref={stateMetaElement} /> */}
         </div>
 
         <div className="state-right">
