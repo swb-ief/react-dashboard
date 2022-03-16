@@ -301,7 +301,7 @@ function TimeseriesExplorer({
           </div>
         </div>
       </div>
-      {dropdownRegions && (
+      {/* {dropdownRegions && (
         <div className="state-selection">
           <div className="dropdown">
             <select
@@ -331,7 +331,7 @@ function TimeseriesExplorer({
             <ReplyIcon />
           </div>
         </div>
-      )}
+      )} */}
       {isVisible && (
         <Suspense fallback={<TimeseriesLoader />}>
           <Timeseries

@@ -8,6 +8,7 @@ import {
   STATE_NAMES,
   STATISTIC_CONFIGS,
   UNKNOWN_DISTRICT_KEY,
+  DATA_API_ROOT_MUMBAI_WARD,
 } from '../constants';
 import useIsVisible from '../hooks/useIsVisible';
 import {
@@ -79,6 +80,14 @@ function Mumbai() {
 
   const {data: timeseries, error: timeseriesResponseError} = useSWR(
     `${DATA_API_ROOT_MUMBAI_DISTRICT}`,
+    fetcher,
+    {
+      revalidateOnMount: true,
+      refreshInterval: 100000,
+    }
+  );
+  const {data: timeseries2, error: timeseriesResponseError2} = useSWR(
+    `${DATA_API_ROOT_MUMBAI_WARD}`,
     fetcher,
     {
       revalidateOnMount: true,
@@ -170,17 +179,18 @@ function Mumbai() {
   }, [stateData]);
 
   if (timeseriesResponseError) {
-    console.error(timeseriesResponseError);
+    console.log(timeseriesResponseError);
+    return <h1>Something went wrong</h1>;
+  }
+  if (timeseriesResponseError2) {
+    console.log(timeseriesResponseError2);
     return <h1>Something went wrong</h1>;
   }
   if (error) {
-    console.error(error);
+    console.log(error);
     return <h1>Something went wrong</h1>;
   }
-  if (!timeseries) {
-    return <h1>Loading</h1>;
-  }
-  if (!data) {
+  if (!timeseries || !timeseries2 || !data) {
     return <h1>Loading</h1>;
   }
 
