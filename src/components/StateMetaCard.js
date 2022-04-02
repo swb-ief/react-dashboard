@@ -18,9 +18,11 @@ function StateMetaCard({
     <div className={`meta-item ${className}`}>
       <div className="meta-item-top">
         <h3>{title}</h3>
-        <Tooltip message={formula}>
-          <InfoIcon size={16} />
-        </Tooltip>
+        {formula && (
+          <Tooltip message={formula}>
+            <InfoIcon size={16} />
+          </Tooltip>
+        )}
       </div>
       <h1>{statistic}</h1>
       <h5>{date}</h5>

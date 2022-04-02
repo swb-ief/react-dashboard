@@ -128,15 +128,14 @@ h6 {
   min-height: 100vh;
 }
 
-.contributors{
-  display:flex;
-  justify-content:space-around;
-  flex-wrap:wrap;
+.contributors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.contributors img{
-  height:5rem;
+.contributors img {
+  height: 5rem;
 }
-
 
 .arrow-up {
   border-bottom: 5px solid $gray-mid;
@@ -266,7 +265,7 @@ h6 {
     .mumbai-btn-container {
       text-decoration: none;
       .mumbai-btn {
-        color: #F1C40F;
+        color: #f1c40f;
         width: max-content;
         padding: 0.2rem;
         border-radius: 5px;
@@ -537,6 +536,208 @@ h6 {
         cursor: pointer;
         stroke-width: 2.5px;
         width: 16px;
+      }
+    }
+
+    .meta-item-middle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      * {
+        align-self: center;
+      }
+
+      svg {
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      padding-right: 1rem;
+    }
+
+    &.confirmed {
+      background: $cherry-light;
+
+      h3,
+      h5,
+      svg,
+      p {
+        color: $cherry-mid;
+      }
+
+      h1 {
+        color: $cherry;
+      }
+    }
+
+    &.active {
+      background: $blue-light;
+
+      h3,
+      h5,
+      svg,
+      p {
+        color: $blue-mid;
+      }
+
+      h1 {
+        color: $blue;
+      }
+    }
+
+    &.recovery {
+      background: $green-light;
+
+      h3,
+      h5,
+      svg,
+      p {
+        color: $green-mid;
+      }
+
+      h1 {
+        color: $green;
+      }
+    }
+
+    &.mortality {
+      background: $gray-light;
+
+      h3,
+      h5,
+      svg,
+      p {
+        color: $gray-mid;
+      }
+
+      h1 {
+        color: $gray;
+      }
+    }
+
+    &.cpl {
+      background: $yellow-light;
+
+      h3,
+      h5,
+      svg {
+        color: $orange-mid;
+      }
+
+      h1 {
+        color: $orange;
+      }
+    }
+
+    &.tpl {
+      background: $purple-light;
+
+      h3,
+      h5,
+      svg,
+      p {
+        color: $purple-mid;
+      }
+
+      h1 {
+        color: $purple;
+      }
+    }
+
+    &.tpr {
+      background: $orange-light;
+
+      h3,
+      h5,
+      p,
+      svg {
+        color: $orange-mid;
+      }
+
+      h1 {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.Rechart {
+  align-self: center;
+  text-align: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  //margin-bottom: 3rem;
+  width: 100%;
+}
+
+.StateMetaBottom {
+  align-self: center;
+  text-align: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+  //margin-bottom: 3rem;
+  width: calc(100% - 5rem);
+
+  &.population {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin: 0;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+
+    .alert {
+      margin: 0;
+    }
+  }
+
+  .meta-item {
+    border-radius: 5px;
+    min-height: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+    }
+
+    h5 {
+      font-weight: 600;
+    }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    h3 {
+      font-weight: 600;
+      word-wrap: break-word;
+    }
+
+    h1 {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    &.population {
+      min-height: 1rem !important;
+      padding: 0 !important;
+
+      h1,
+      h3 {
+        color: $gray;
       }
     }
 
@@ -5440,7 +5641,7 @@ footer {
         select {
           background: #1e1e30;
           background-image: linear-gradient(45deg, transparent 50%, $gray 50%),
-          linear-gradient(135deg, $gray 50%, transparent 50%);
+            linear-gradient(135deg, $gray 50%, transparent 50%);
           background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
           background-repeat: no-repeat;
           background-size: 5px 5px, 5px 5px;

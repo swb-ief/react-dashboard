@@ -11,12 +11,12 @@ export const API_DOMAIN_MUMBAI = 'http://bowersbenjamin.pythonanywhere.com';
 export const DATA_API_ROOT_MUMBAI_DISTRICT = `${API_DOMAIN_MUMBAI}/phase2_districts_overview`;
 export const DATA_API_ROOT_MUMBAI_WARD = `${API_DOMAIN_MUMBAI}/phase2_wards`;
 
-  // DISTRICT_TABLE_COUNT,
-  // STATE_NAMES,
-  // STATISTIC_CONFIGS,
-  // TABLE_STATISTICS,
-  // TABLE_STATISTICS_EXPANDED,
-  // UNASSIGNED_STATE_CODE,
+// DISTRICT_TABLE_COUNT,
+// STATE_NAMES,
+// STATISTIC_CONFIGS,
+// TABLE_STATISTICS,
+// TABLE_STATISTICS_EXPANDED,
+// UNASSIGNED_STATE_CODE,
 export const DATA_API_ROOT = `${API_DOMAIN}/data/static`;
 export const API_REFRESH_INTERVAL = 100000; // seconds
 
@@ -301,7 +301,9 @@ export const MAP_TYPES = {
 };
 
 export const MAPS_DIR =
-  process.env.NODE_ENV === 'production' ? `${process.env.PUBLIC_URL}/mini_maps` : `${process.env.PUBLIC_URL}/projected_maps`;
+  process.env.NODE_ENV === 'production'
+    ? `${process.env.PUBLIC_URL}/mini_maps`
+    : `${process.env.PUBLIC_URL}/projected_maps`;
 
 export const MAP_META = {
   AP: {
