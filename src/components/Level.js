@@ -1,5 +1,6 @@
 import {
   LEVEL_STATISTICS,
+  MUMBAI_LEVEL_STATISTICS,
   STATISTIC_CONFIGS,
   SPRING_CONFIG_NUMBERS,
 } from '../constants';
@@ -63,23 +64,53 @@ function PureLevelItem({statistic, total, delta}) {
 
 const LevelItem = memo(PureLevelItem);
 
-function Level({data}) {
+function Level({data, isMumbai = false}) {
+  const levelStatistics = isMumbai ? MUMBAI_LEVEL_STATISTICS : LEVEL_STATISTICS;
+
   const trail = useMemo(() => {
     const styles = [];
 
-    LEVEL_STATISTICS.map((statistic, index) => {
+    levelStatistics.map((statistic, index) => {
       styles.push({
         animationDelay: `${750 + index * 250}ms`,
-        width: `calc(${100 / LEVEL_STATISTICS.length}%)`,
+        width: `calc(${100 / levelStatistics.length}%)`,
       });
       return null;
     });
     return styles;
   }, []);
 
+  function getDatasetKey(statistic) {
+    switch (statistic) {
+      case 'active':
+        return 'total.active';
+      case 'positive':
+        return 'delta.positive';
+      case 'deaths':
+        return 'delta.deaths';
+      case 'discharged':
+        return 'delta.discharged';
+      case 'critical':
+        return 'active.critical';
+      case 'stable_symptomatic':
+        return 'active.symptomatic';
+      case 'stable_asymptomatic':
+        return 'active.asymptomatic';
+      default:
+        return 'total.active';
+    }
+  }
+
+  function getItemStatistics(statistic) {
+    const datasetKey = getDatasetKey(statistic);
+    const dataset = data.map((item) => item[datasetKey]);
+    const result = dataset.reduce((item, prev) => prev + item, 0);
+    return result;
+  }
+
   return (
     <div className="Level">
-      {LEVEL_STATISTICS.map((statistic, index) => (
+      {levelStatistics.map((statistic, index) => (
         <animated.div
           key={index}
           className={classnames('level-item', `is-${statistic}`, 'fadeInUp')}
@@ -87,7 +118,11 @@ function Level({data}) {
         >
           <LevelItem
             {...{statistic}}
-            total={getStatistic(data, 'total', statistic)}
+            total={
+              data.constructor === Array
+                ? getItemStatistics(statistic)
+                : getStatistic(data, 'total', statistic)
+            }
             delta={getStatistic(data, 'delta', statistic)}
           />
         </animated.div>

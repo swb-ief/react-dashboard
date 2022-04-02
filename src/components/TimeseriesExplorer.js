@@ -108,9 +108,9 @@ function TimeseriesExplorer({
   const regions = useMemo(() => {
     const states = Object.keys(timeseries || {})
       .filter((code) => code !== stateCode)
-      .sort((code1, code2) =>
-        STATE_NAMES[code1].localeCompare(STATE_NAMES[code2])
-      )
+      // .sort((code1, code2) =>
+      //   STATE_NAMES[code1].localeCompare(STATE_NAMES[code2])
+      // )
       .map((code) => {
         return {
           stateCode: code,
@@ -301,7 +301,7 @@ function TimeseriesExplorer({
           </div>
         </div>
       </div>
-      {dropdownRegions && (
+      {/* {dropdownRegions && (
         <div className="state-selection">
           <div className="dropdown">
             <select
@@ -331,7 +331,7 @@ function TimeseriesExplorer({
             <ReplyIcon />
           </div>
         </div>
-      )}
+      )} */}
       {isVisible && (
         <Suspense fallback={<TimeseriesLoader />}>
           <Timeseries

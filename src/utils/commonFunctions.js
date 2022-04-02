@@ -179,7 +179,19 @@ export const getStatistic = (
   }
 
   let val;
-  if (statistic === 'active' || statistic === 'activeRatio') {
+  if (
+    [
+      'active',
+      'positive',
+      'deaths',
+      'discharged',
+      'critical',
+      'stable_symptomatic',
+      'stable_asymptomatic',
+    ].includes(statistic)
+  ) {
+    val = data?.[statistic];
+  } else if (statistic === 'active' || statistic === 'activeRatio') {
     const confirmed = data?.[type]?.confirmed || 0;
     const deceased = data?.[type]?.deceased || 0;
     const recovered = data?.[type]?.recovered || 0;
