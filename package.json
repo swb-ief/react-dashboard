@@ -54,7 +54,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "yarn run compress_maps && copy build\\index.html build\\404.html && yarn run build:sw",
+    "postbuild": "yarn run compress_maps && yarn run build:sw",
     "compress_maps": "rollup -c",
     "test": "react-scripts test --testPathIgnorePatterns=src/tests/ --passWithNoTests",
     "test:map": "react-scripts test src/tests/mapAndApiStateNames.test.js",
